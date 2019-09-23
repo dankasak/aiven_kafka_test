@@ -1,0 +1,29 @@
+==================
+Build Instructions
+==================
+
+This directory contains a Makefile that assists in building and running the docker container.
+You should set the NS variable to something appropriate to your environment.
+
+To build, run:
+
+ make build
+
+To enter the container ( to examine things - it contains pudb3 for python debugging ), run:
+
+ make shell
+
+==================
+Usage Instructions
+==================
+
+This repository contains 2 scripts: run_consumer.sh and run_producer.sh. These run the
+container in different modes ( executing os_stats_consumer.py or os_stats_producer.py ).
+These scripts also should be edited to refer to your local environment ( ie replace:
+ tesla.duckdns.org with your hostname you build the container on ).
+
+Both of these scripts have command-line arguments, for defining connection details for
+Postgres and Kafka. I've set defaults for all args, which are valid for the Avien services
+I've been developing against. I've also included the Kafka access keys in the container.
+You can pass args into the container by appending them to the end of the wrapper scripts.
+I've left 1 arg in each wrapper script as an example.

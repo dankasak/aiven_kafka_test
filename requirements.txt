@@ -1,0 +1,4 @@
+pudb
+linux-metrics
+kafka-python
+psycopg2-binary
